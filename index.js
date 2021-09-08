@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const conection = require("./database/database")
+const user = require("./user/User")
 
 app.set('view engine','ejs')
 app.use(express.static('public'))
