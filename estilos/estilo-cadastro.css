@@ -1,0 +1,60 @@
+
+#corpoCadastro{
+    
+    background-color: rgb(239, 247, 240);
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+#formCad{
+    display: flex;
+    background-color: white;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 5rem;
+    flex-wrap: wrap;
+    
+}
+#formulario{
+    flex:1;
+    padding-bottom: 2rem;
+
+}
+input{
+    display: block;
+    min-width: 80%;
+    height: 1rem;
+    background-color: rgb(232, 235, 240);
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+#imgCad{
+    flex: 1;
+    background-image: url("../1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    max-width: 100%;
+    
+    
+
+}
+button{
+    background-color: darkgreen;
+    color: white;
+    height: 2rem;
+    width: 5rem;
+}
+
+.seta{
+    width: 3rem;
+    height: 3rem;
+    background-color: yellowgreen;
+}
+a:visited{
+    color: black;
+}

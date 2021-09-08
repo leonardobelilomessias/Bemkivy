@@ -1,0 +1,160 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a, a:visited{
+    color: white;
+    text-decoration: none;
+
+}
+header{
+    display: flex;
+    background-color: black;
+    color:white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header p {
+    padding: 2rem;
+}
+header h1{
+    padding: 1rem;
+}
+#corpo{
+    display: flex;
+    background-color: rgba(245, 252, 246, 0.849);
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    width: 100%;
+}
+
+#dashboard{
+    background-color: rgba(245, 252, 246, 0.849);
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+#info-user{
+    background-color:white;
+    margin: 10px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgb(112, 112, 112) 1px 1px 5px;
+}
+#avatar{
+    
+    background-color: violet;
+    height: 150px;
+    width: 150px;
+    background-image: url('../1.jpg');
+    background-size:cover;
+    border-radius: 50%;
+    background-position: center;
+
+}
+#detalhes{
+    background-color: rgb(248, 246, 246);
+    border:gray 1px solid;
+    border-radius: 5px;
+    flex: 3;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+#detalhes span{
+    margin-bottom: 4px !important;
+}
+#detalhes span :first-child{
+    font-weight:bold;
+    text-transform: capitalize;
+    font-family:sans-serif;
+
+}
+#seccao1{
+    background-color:white;
+    margin: 10px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 1rem;
+    box-shadow: rgb(112, 112, 112) 1px 1px 5px;
+}
+#seccao2{
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 1rem;
+    box-shadow: rgb(112, 112, 112) 1px 1px 5px;
+    
+}
+
+.elemento{
+    flex: 1;
+    margin: 1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    border-radius: 10px;
+    border:gray 1px solid;
+    
+    
+
+}
+.elementos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.elemento p{
+    text-align: center;
+}
+
+
+#lateral{
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    padding: 2rem;
+    min-width: 4rem;
+
+}
+#opcao{
+    margin: 1rem;
+    background-color: rgb(255, 255, 255);
+    list-style-position: inside;
+    border-radius: 10px;
+    padding: 2rem;
+    border:gray 1px solid;
+    box-shadow: rgb(112, 112, 112) 1px 1px 5px;
+}
+#info{
+    margin: 1em;
+    list-style-position: inside;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 2rem;
+    border:gray 1px solid;
+    box-shadow: rgb(112, 112, 112) 1px 1px 5px;
+}
+
+
+#rodape{
+    background-color: rgb(39, 36, 36);
+    height: 2rem;
+    padding: 2rem;
+    color: white;
+    text-transform: uppercase;
+}
