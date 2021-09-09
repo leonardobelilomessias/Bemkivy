@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const conection = require("./database/database")
 const user = require("./user/User")
+const Usercontroler = require("./user/User.controller")
 
 app.set('view engine','ejs')
 app.use(express.static('public'))
@@ -24,10 +25,7 @@ app.get("/cadastro",(req,res)=>{
     res.render("cadastro")
 })
 
-app.get("/user",(req,res)=>{
-    res.render("/users/index")
-})
-
+app.use("/",Usercontroler)
 
 
 

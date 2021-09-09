@@ -35,5 +35,5 @@ const User = conection.define('users',{
 })
 
 
-User.sync({foce:true})
+//User.sync({foce:true})
 module.exports = User
