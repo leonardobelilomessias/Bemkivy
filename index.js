@@ -2,9 +2,11 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 const conection = require("./database/database")
-const user = require("./user/User")
+const User = require("./user/User")
 const Usercontroler = require("./user/User.controller")
 const session = require("express-session")
+const Getimg = require("./Getimg")
+
 
 app.use(session({
     secret:"kakscbeq4141qw2c",cookie:{maxAge:3000000}
@@ -23,9 +25,14 @@ conection.authenticate().then(()=>{
     console.log('Conexão com banco de dados realizada')
 })
 
+//let imagens = Getimg()
 
 app.get("/",(req,res)=>{
-    res.render("index")
+    
+    User.findAll().then(lista=>{
+    res.render("index",{lista:lista})
+
+    })
 })
 
 app.get("/login",(req,res)=>{

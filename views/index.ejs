@@ -29,8 +29,18 @@
            
             <div id="profissionais">
                 
-               modelo profissional
-                
+               
+                <% lista.forEach(element => { %>
+                    <article id="profissional">
+                        <img class= "profileImg" src='https://cdn.dribbble.com/users/1186261/screenshots/3718681/media/27438516469ad4d494718cb2b9895ca5.gif' alt="" srcset="" width="200px" height="150px">
+                        <div id="infoProfissional">
+                            <p class="negrito nome1"><%= element.nome %> </p>
+                            <p><span><p class="negrito">Categoria:</p></span><%= element.categoria %> </p>
+                            <p><span class="negrito">Descrição:</span>. <%= element.descricao %></p>
+                            <p> <span class="negrito" >Avaiaçoes:</span> <%= element.avaliacao %></p>
+                        </div>
+                    </article>
+                <% }) %>
             <article id="profissional">
                 <img src="./1.jpg" alt="" srcset="" width="200px" height="150px">
                 <div id="infoProfissional">
@@ -77,6 +87,6 @@
     </article>
     </main>
     <footer> <p>Todos direitos reservados para profissionais autonomos | 2021</p></footer>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -161,11 +161,7 @@ header #user{
     flex-wrap: wrap;
     
 }
-#profissional:hover{
-    
-    border-left: turquoise 3px solid;
-    transition:linear 0.3s;
-}
+
 #profissional img{
     margin: auto;
     
