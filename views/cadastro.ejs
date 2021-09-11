@@ -29,9 +29,12 @@
                 <form action="/user/create" method="POST">
                     
                     <label for="femail">Email</label>
-                    <input type="text" name="femail" id="femail">
+                    <input type="email" name="femail" id="femail" required>
                     <label for="fsenha">Senha</label>
-                    <input type="password" name="fsenha" id="fsenha">
+                    <input type="password" name="fsenha" id="fsenha" required>
+                    <% if(!user){ %>
+                        <p><small> usuario já existe. tente fazer o login</small></p>
+                   <% } %> 
                     <button type="submit">Cadastrar</button>
 
                 </form>

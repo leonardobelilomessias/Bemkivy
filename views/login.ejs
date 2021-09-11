@@ -29,13 +29,13 @@
 
                      <span><a href="/cadastro">Criar uma conta</a></span></h4>
                 <br>
-                <form action="/user" method="POST">
+                <form action="/authenticate" method="POST">
                     
                     
                     <label for="femail">Email</label>
-                    <input type="text" name="femail" id="femail">
+                    <input type="text" name="femail" id="femail" required>
                     <label for="fsenha">Senha</label>
-                    <input type="password" name="fsenha" id="fsenha">
+                    <input type="password" name="fsenha" id="fsenha" required>
                     <button type="submit">Entrar</button>
 
                 </form>

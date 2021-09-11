@@ -4,6 +4,12 @@ const app = express();
 const conection = require("./database/database")
 const user = require("./user/User")
 const Usercontroler = require("./user/User.controller")
+const session = require("express-session")
+
+app.use(session({
+    secret:"kakscbeq4141qw2c",cookie:{maxAge:3000000}
+}))
+
 //const bodyParser = require("body-parser")
 
 app.use(express.urlencoded({extended:true}))
@@ -27,7 +33,7 @@ app.get("/login",(req,res)=>{
 })
 
 app.get("/cadastro",(req,res)=>{
-    res.render("cadastro")
+    res.render("cadastro",{user:true})
 })
 
 app.use("/",Usercontroler)

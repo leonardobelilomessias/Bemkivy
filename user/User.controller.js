@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const User = require("./User")
+const UserAuth = require("../midwares/UserAuth")
+const session = require("express-session")
 
 router.use(express.urlencoded({extended:true}))
 router.use(express.json())
 
-router.get("/user",(req,res)=>{
+router.get("/user",UserAuth,(req,res)=>{
     res.render("users")
 });
 
@@ -29,25 +31,37 @@ router.post("/user/create",(req,res)=>{
                 }).then( res.redirect("/user")).catch(e=>{res.send(e)})
             }
             else{
-                res.send('usuario já existe')
+                res.redirect("/cadastro")
             }
         })
     }
 })
 
-router.post("/user",(req,res)=>{
+router.post("/authenticate",(req,res)=>{
     let dado = req.body
     User.findOne({
         where:{
             email:dado.femail,
             senha:dado.fsenha
         }
-    }).then(dado=>{
-        if(dado != undefined){
+    }).then(user=>{
+       if(user != undefined){
+           
+            req.session.user = {
+                email:user.email,
+                id: user.id
+                
+            }
             res.redirect("/user")
         }else{
-            res.send('usuario não existe')
+            res.redirect("/login")
         }
     }).catch(e=>{})
+
+})
+
+router.get("/logoof",(req,res)=>{
+    req.session.user = undefined
+    res.redirect("/login")
 })
 module.exports = router;
