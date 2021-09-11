@@ -31,7 +31,13 @@ const User = conection.define('users',{
         type: sequelize.TEXT,
         allowNull:true,
         defaultValue:'não definido'
-    }
+    },
+    nome:{
+        type:sequelize.STRING,
+        allowNull:true,
+        defaultValue:"não definido"
+    },
+
 })
 
 

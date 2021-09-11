@@ -1,8 +1,13 @@
+const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 const conection = require("./database/database")
 const user = require("./user/User")
 const Usercontroler = require("./user/User.controller")
+//const bodyParser = require("body-parser")
+
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
 app.set('view engine','ejs')
 app.use(express.static('public'))
